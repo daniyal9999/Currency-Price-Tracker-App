@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/price">Check Rate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/currencies">Top Currencies</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+  
+  <div class="container my-6">
+  
+  <% var eth = () => articles.rates.usd.value/articles.rates.eth.value %>
+  <% var ltc = () => articles.rates.usd.value/articles.rates.ltc.value %>
+  <% var bch = () => articles.rates.usd.value/articles.rates.bch.value %>
+  <% var bnb = () => articles.rates.usd.value/articles.rates.bnb.value %>
+  <% var xrp = () => articles.rates.usd.value/articles.rates.xrp.value %>
+  <% var btc = () => articles.rates.usd.value/articles.rates.btc.value %>
+  <% var link = () => articles.rates.usd.value/articles.rates.link.value %>
+  <% var dot = () => articles.rates.usd.value/articles.rates.dot.value %>
+  <% var usd = () => articles.rates.usd.value/articles.rates.usd.value %>
+  <% var cad = () => articles.rates.usd.value/articles.rates.cad.value %>
+  <% var cny = () => articles.rates.usd.value/articles.rates.cny.value %>
+  <% var eur = () => articles.rates.usd.value/articles.rates.eur.value %>
+  <% var gbp = () => articles.rates.usd.value/articles.rates.gbp.value %>
+  <% var inr = () => articles.rates.usd.value/articles.rates.inr.value %>
+  <% var jpy = () => articles.rates.usd.value/articles.rates.jpy.value %>
+  <% var pkr = () => articles.rates.usd.value/articles.rates.pkr.value %>
+  <% var lkr = () => articles.rates.usd.value/articles.rates.lkr.value %>
+  <% var kwd = () => articles.rates.usd.value/articles.rates.kwd.value %>
+  <% var idr = () => articles.rates.usd.value/articles.rates.idr.value %>
+  <% var hkd = () => articles.rates.usd.value/articles.rates.hkd.value %>
+  <% var chf = () => articles.rates.usd.value/articles.rates.chf.value %>
+  <% var aed = () => articles.rates.usd.value/articles.rates.aed.value %>
+  <% var aud = () => articles.rates.usd.value/articles.rates.aud.value %>
+
+    
+
+    <% if (crp =="eth") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= eth() %> </h3>
+
+    <% }else if (crp =="ltc") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= ltc() %> </h3>
+
+    <% }else if (crp =="bch") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= bch() %> </h3>
+
+    <% }else if (crp =="bnb") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= bnb() %> </h3>
+
+    <% }else if (crp =="xrp") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= xrp() %> </h3>
+
+    <% }else if (crp =="link") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= link() %> </h3>
+
+    <% }else if (crp =="dot") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= dot() %> </h3>
+
+    <% }else if (crp =="btc") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= btc() %> </h3>
+
+    <% }else if (crp =="usd") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= usd() %> </h3>
+
+    <% }else if (crp =="cad") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= cad() %> </h3>
+
+    <% }else if (crp =="cny") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= cny() %> </h3>
+
+    <% }else if (crp =="eur") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= eur() %> </h3>
+
+    <% }else if (crp =="gbp") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= gbp() %> </h3>
+
+    <% }else if (crp =="inr") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= inr() %> </h3>
+
+    <% }else if (crp =="jpy") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= jpy() %> </h3>
+
+    <% }else if (crp =="pkr") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= pkr() %> </h3>
+
+    <% }else if (crp =="lkr") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= lkr() %> </h3>
+
+    <% }else if (crp =="kwd") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= kwd() %> </h3>
+
+    <% }else if (crp =="idr") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= idr() %> </h3>
+
+    <% }else if (crp =="hkd") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= hkd() %> </h3>
+
+    <% }else if (crp =="chf") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= chf() %> </h3>
+
+    <% }else if (crp =="aed") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= aed() %> </h3>
+
+    <% }else if (crp =="aud") { %>
+      <h3 class="title">Price of <%= crp %> in USD:</h3>
+      <h3> <%= aud() %> </h3>
+
+    <% }else { %>
+      <h3 class="title">"<%= crp %>" is not a valid currency code</h3>
+      <p class="title">Make sure to enter correct currency code</p>
+      <p class="title">E.g. "btc" for bitcoin, "usd" for US Dollar</p>
+    <% } %>
+
+
+  <a href="/price" class="btn btn-outline-secondary btn-sm">Back</a>
+  </div>
+     
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="/"> price-aggregator.herokuapp.com</a>
+  </div>
+
+</footer>
+   
+        
+</body>
+
+</html>

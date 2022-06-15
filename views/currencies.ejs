@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+  
+          <li class="nav-item">
+            <a class="nav-link" href="/price">Check Rate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/currencies">Top Currencies</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+   <div class="container my-5">
+    <% if (currencies) { %>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Currency</th>
+            <th scope="col">Price in terms of USD</th>
+            <th scope="col">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><%= currencies.rates.btc.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.btc.value%></td>
+            <td><%= currencies.rates.btc.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><%= currencies.rates.eth.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.eth.value%></td>
+            <td><%= currencies.rates.eth.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><%= currencies.rates.ltc.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.ltc.value%></td>
+            <td><%= currencies.rates.ltc.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td><%= currencies.rates.xrp.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.xrp.value%></td>
+            <td><%= currencies.rates.xrp.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td><%= currencies.rates.usd.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.usd.value%></td>
+            <td><%= currencies.rates.usd.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td><%= currencies.rates.eur.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.eur.value%></td>
+            <td><%= currencies.rates.eur.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td><%= currencies.rates.pkr.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.pkr.value%></td>
+            <td><%= currencies.rates.pkr.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td><%= currencies.rates.cad.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.cad.value%></td>
+            <td><%= currencies.rates.cad.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td><%= currencies.rates.jpy.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.jpy.value%></td>
+            <td><%= currencies.rates.jpy.type %></td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td><%= currencies.rates.kwd.name %></td>
+            <td><%= currencies.rates.usd.value/currencies.rates.kwd.value%></td>
+            <td><%= currencies.rates.kwd.type %></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    
+    <% } %>
+   </div>
+      
+    <!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="/"> price-aggregator.herokuapp.com</a>
+  </div>
+
+</footer> 
+        
+</body>
+
+</html>
